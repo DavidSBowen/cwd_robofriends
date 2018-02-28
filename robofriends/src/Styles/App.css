@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Krona+One');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Brush+Script');
+
+h1 {
+    font-family: 'Krona One', sans-serif;
+    text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+        1px 1px 0 #fff;
+}
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+}
+
+p {
+    font-family: 'Nanum Brush Script', cursive;
+}

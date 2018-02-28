@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Styles/App.css';
 
 const Card = ({name, email, id}) => {
     return (
