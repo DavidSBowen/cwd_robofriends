@@ -29,20 +29,22 @@ class App extends Component {
     }
 
     render() {
-
-        const filteredRobots = this.state.robots.filter(robot => {
-            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const { robots, searchfield } = this.state;
+        const filteredRobots = robots.filter(robot => {
+            return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         });
 
-        return (
-            <div className='tc bg-blue ma0'>
-                <h1 className='mt0 pa3 pt5'>Robo Friends</h1>
-                <SearchBox searchChange={this.onSearchChange} />
-                <Scroll>
-                    <CardList robots={filteredRobots} />
-                </Scroll>
-            </div>
-        )
+        return !robots.length ?
+            <h1>Loading</h1> :
+            (
+                <div className='tc bg-blue ma0'>
+                    <h1 className='mt0 pa3 pt5'>Robo Friends</h1>
+                    <SearchBox searchChange={this.onSearchChange} />
+                    <Scroll>
+                        <CardList robots={filteredRobots} />
+                    </Scroll>
+                </div>
+            );
     }
 }
 
